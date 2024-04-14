@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 /**
  * 创建订单的请求 入参
  */
@@ -15,7 +18,19 @@ import lombok.NoArgsConstructor;
 public class CommandOderCreateDTO {
 
     /**
-     * 商品规格id
+     * 订单号
+     */
+    private String id;
+
+
+    /**
+     * 购买人
+     */
+    private String userId;
+
+
+    /**
+     * SkuId
      */
     private String skuId;
 
@@ -25,9 +40,44 @@ public class CommandOderCreateDTO {
     private Integer amount;
 
     /**
-     * 用户id
+     * 购买金额
      */
-    private String userId;
+    private BigDecimal money;
+
+    /**
+     * 购买时间
+     */
+    private LocalDateTime payTime;
+
+    /**
+     * 支付状态
+     */
+    private String payStatus;
+
+    /**
+     * 删除标志（0代表存在 1代表删除）
+     */
+    private Long delFlag;
+
+    /**
+     * 创建人
+     */
+    private String createBy;
+
+    /**
+     * 创建时间
+     */
+    private LocalDateTime createTime;
+
+    /**
+     * 修改人
+     */
+    private String updateBy;
+
+    /**
+     * 修改时间
+     */
+    private LocalDateTime updateTime;
 
 
 }

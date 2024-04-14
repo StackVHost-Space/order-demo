@@ -74,6 +74,12 @@
             <version>3.0.4</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit</artifactId>
+            <version>3.0.3</version>
+            <scope>compile</scope>
+        </dependency>
 
 
         <!--        <dependency>-->
